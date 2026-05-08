@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Alltech National Title — April 2026 Ops Scorecard</title>
+<title>Alltech National Title — __MONTH_YEAR__ Ops Scorecard</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -141,7 +141,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
         </div>
       </div>
       <div class="brand-info">
-        <div class="bi-title">April 2026</div>
+        <div class="bi-title">__MONTH_YEAR__</div>
         <div class="bi-sub">Operational Scorecard</div>
       </div>
     </div>
@@ -162,17 +162,17 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
 
 <div id="tab-coo" class="tab-pane active">
 
-<div class="sl">Production — April 2026 (Qualia MTD)</div>
+<div class="sl">Production — __MONTH_YEAR__ (Qualia MTD)</div>
 <div class="g6" style="margin-bottom:20px;">
-  <div class="tile"><div class="tt" style="background:var(--navy)"></div><div class="ti">📂</div><div class="tv c-navy">667</div><div class="tl">MTD Files Opened</div><div class="ts">7 branches combined</div></div>
-  <div class="tile"><div class="tt" style="background:var(--green)"></div><div class="ti">✅</div><div class="tv c-green">416</div><div class="tl">MTD Files Closed</div><div class="ts">Net pipeline: +251 open</div></div>
-  <div class="tile"><div class="tt" style="background:var(--yellow)"></div><div class="ti">🎯</div><div class="tv c-yellow">62%</div><div class="tl">Closing Ratio</div><div class="ts">Target: 85%</div></div>
-  <div class="tile"><div class="tt" style="background:var(--navy)"></div><div class="ti">💰</div><div class="tv c-navy">$1,007,742</div><div class="tl">Total Revenue</div><div class="ts">Avg $2,423/file</div></div>
-  <div class="tile"><div class="tt" style="background:var(--red)"></div><div class="ti">⚠️</div><div class="tv c-red">$10,129</div><div class="tl">Total Errors</div><div class="ts">1.0% of revenue · Target &lt;0.5%</div></div>
+  <div class="tile"><div class="tt" style="background:var(--navy)"></div><div class="ti">📂</div><div class="tv c-navy">__TOTAL_OPENED__</div><div class="tl">MTD Files Opened</div><div class="ts">7 branches combined</div></div>
+  <div class="tile"><div class="tt" style="background:var(--green)"></div><div class="ti">✅</div><div class="tv c-green">__TOTAL_CLOSED__</div><div class="tl">MTD Files Closed</div><div class="ts">Net pipeline: __NET_PIPELINE__ open</div></div>
+  <div class="tile"><div class="tt" style="background:var(--yellow)"></div><div class="ti">🎯</div><div class="tv c-yellow">__CLOSING_RATIO__</div><div class="tl">Closing Ratio</div><div class="ts">Target: 85%</div></div>
+  <div class="tile"><div class="tt" style="background:var(--navy)"></div><div class="ti">💰</div><div class="tv c-navy">__TOTAL_REVENUE__</div><div class="tl">Total Revenue</div><div class="ts">Avg __AVG_REVENUE_PER_FILE__/file</div></div>
+  <div class="tile"><div class="tt" style="background:var(--red)"></div><div class="ti">⚠️</div><div class="tv c-red">__TOTAL_ERRORS__</div><div class="tl">Total Errors</div><div class="ts">1.0% of revenue · Target &lt;0.5%</div></div>
   <div class="tile"><div class="tt" style="background:var(--orange)"></div><div class="ti">📋</div><div class="tv c-orange">82.9%</div><div class="tl">Files w/ Open Tasks</div><div class="ts">335 / 404 closed files</div></div>
 </div>
 
-<div class="sl">Phone Analytics — RingCentral (April 2026 · Full Month · Company-Wide)</div>
+<div class="sl">Phone Analytics — RingCentral (__MONTH_YEAR__ · Full Month · Company-Wide)</div>
 <div class="pc-wrap" style="margin-bottom:20px;">
   <div style="font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--txt3);margin-bottom:16px;">Company · 5,417 Total Calls · April 1–30, 2026</div>
   <div class="pc-grid">
@@ -195,7 +195,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
 </div>
 
 
-<div class="sl">Phone Analytics — % Completed &amp; % Missed by Region (April 2026)</div>
+<div class="sl">Phone Analytics — % Completed &amp; % Missed by Region (__MONTH_YEAR__)</div>
 <div class="g7" style="margin-bottom:20px;">
   <div class="kc">
     <div class="kch" style="border-left:3px solid var(--green);padding-left:11px;">PTG</div>
@@ -262,7 +262,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
   </div>
 </div>
 
-<div class="sl">Task Completion — AI QC &amp; Total Tasks per Region (Qualia · April 2026)</div>
+<div class="sl">Task Completion — AI QC &amp; Total Tasks per Region (Qualia · __MONTH_YEAR__)</div>
 <div class="g5" style="margin-bottom:20px;">
   <div class="task-card">
     <div class="task-head">
@@ -401,7 +401,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
   </div>
 </div>
 
-<div class="sl">All Users — Phone Performance (April 2026 Full Month)</div>
+<div class="sl">All Users — Phone Performance (__MONTH_YEAR__ Full Month)</div>
 <div class="utbl-wrap" style="margin-bottom:20px;">
   <table class="utbl">
     <thead><tr><th>Name</th><th>Region</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -497,7 +497,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
   </div>
 </div>
 <div class="footnote">
-  Data: Qualia MTD (May 1, 2026) · RingCentral Monthly (April 1–30, 2026) · Expense Transfers April 2026 · ATG April Metrics (AI QC + Task data)<br>
+  Data: Qualia MTD (May 1, 2026) · RingCentral Monthly (April 1–30, 2026) · Expense Transfers __MONTH_YEAR__ · ATG April Metrics (AI QC + Task data)<br>
   ⚠ PA and TX AI QC not configured in Qualia templates · ⚠ April P&L pending — financials excluded · See Ross English for financial dashboard<br>
   Prepared by: Hope Ottoviani, COO · Alltech National Title · May 2026
 </div>
@@ -517,18 +517,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">149</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">85</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-yellow">57%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$241,665</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__DMV_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-green">$896</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">149</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">85</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+64</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-yellow">57% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$241,665</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__DMV_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,843</span></div>
     </div>
     <div class="kc">
@@ -538,7 +538,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1,279</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-yellow">414</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-yellow">401</span></div>
@@ -561,7 +561,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Generate 1099</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Verify 1099 info</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order/Receive Title Bringdown</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Schedule Closing</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>QC and Scan File</div></div>
     </div>
   </div>
-  <div class="sl">DMV — Individual Phone Performance (April 2026)</div>
+  <div class="sl">DMV — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -597,18 +597,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">75</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">45</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-yellow">60%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$146,454</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__PA_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-green">$529</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">75</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">45</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+30</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-yellow">60% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$146,454</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__PA_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$3,255</span></div>
     </div>
     <div class="kc">
@@ -618,7 +618,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1,285</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">474</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">140</span></div>
@@ -641,7 +641,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Confirm Policy Type</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Enhanced / Basic Form</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>File QC Review</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Bringdowns</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Payoffs</div></div>
     </div>
   </div>
-  <div class="sl">PA — Individual Phone Performance (April 2026)</div>
+  <div class="sl">PA — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -669,18 +669,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">22</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">9</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-red">41%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$25,184</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__IL_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-green">$0</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">22</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">9</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+13</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-red">41% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$25,184</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__IL_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,798</span></div>
     </div>
     <div class="kc">
@@ -690,7 +690,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">95</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-red">36</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">52</span></div>
@@ -713,7 +713,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Funding & Disbursement</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Process Recording</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>County Tax Verification</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Title Bringdown</div></div>
     </div>
   </div>
-  <div class="sl">IL — Individual Phone Performance (April 2026)</div>
+  <div class="sl">IL — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -738,18 +738,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">184</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">143</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-green">78%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$208,978</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__WI_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-green">$71</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">184</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">143</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+41</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-green">78% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$208,978</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__WI_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$1,461</span></div>
     </div>
     <div class="kc">
@@ -759,7 +759,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">154</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">123</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">20</span></div>
@@ -782,7 +782,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Bringdown</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Post Revenue / Disburse / Close</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Review recording docs</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Receive Recorded Docs</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Title Bringdown</div></div>
     </div>
   </div>
-  <div class="sl">WI — Individual Phone Performance (April 2026)</div>
+  <div class="sl">WI — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -809,18 +809,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">14</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">3</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-red">21%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$7,943</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__TX_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-red">$3,056</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">14</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">3</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+11</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-red">21% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$7,943</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__TX_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,648</span></div>
     </div>
     <div class="kc">
@@ -830,7 +830,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">159</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-yellow">60</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-yellow">46</span></div>
@@ -853,7 +853,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Generate 1099</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Submit Title Package</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Balance File</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Order Deed</div></div>
     </div>
   </div>
-  <div class="sl">TX — Individual Phone Performance (April 2026)</div>
+  <div class="sl">TX — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -877,18 +877,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">173</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">109</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-yellow">63%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$274,914</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__PTG_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-red">$5,577</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">173</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">109</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+64</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-yellow">63% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$274,914</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__PTG_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,522</span></div>
     </div>
     <div class="kc">
@@ -898,7 +898,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-red">0</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">1</span></div>
@@ -912,7 +912,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div style="padding:14px;font-size:11px;color:var(--txt3);">Not in April QC report. Confirm with Qualia admin.</div>
     </div>
   </div>
-  <div class="sl">PTG — Individual Phone Performance (April 2026)</div>
+  <div class="sl">PTG — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -935,18 +935,18 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div><div class="rh-sv c-navy">50</div><div class="rh-sl">MTD Opened</div></div>
       <div><div class="rh-sv c-green">22</div><div class="rh-sl">MTD Closed</div></div>
       <div><div class="rh-sv c-red">44%</div><div class="rh-sl">Close Ratio</div></div>
-      <div><div class="rh-sv c-navy">$102,654</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-navy">__DTG_REVENUE__</div><div class="rh-sl">Revenue</div></div>
       <div><div class="rh-sv c-green">$0</div><div class="rh-sl">Errors</div></div>
     </div>
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Production · April 2026</div>
+      <div class="kch">Production · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">50</span></div>
       <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">22</span></div>
       <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+28</span></div>
       <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-red">44% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
-      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$102,654</span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">__DTG_REVENUE__</span></div>
       <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$4,666</span></div>
     </div>
     <div class="kc">
@@ -956,7 +956,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
     </div>
     <div class="kc">
-      <div class="kch">Phone · April 2026</div>
+      <div class="kch">Phone · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">0</span></div>
       <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-txt3">0</span></div>
       <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-txt3">0</span></div>
@@ -970,7 +970,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div style="padding:14px;font-size:11px;color:var(--txt3);">Not in April QC report. Confirm with Qualia admin.</div>
     </div>
   </div>
-  <div class="sl">DTG — Individual Phone Performance (April 2026)</div>
+  <div class="sl">DTG — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap" style="margin-bottom:16px;">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
@@ -1001,7 +1001,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
   </div>
   <div class="g4" style="margin-bottom:16px;">
     <div class="kc">
-      <div class="kch">Phone Summary · April 2026</div>
+      <div class="kch">Phone Summary · __MONTH_YEAR__</div>
       <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv c-navy">1,665</span></div>
       <div class="kcr"><span class="kclbl">Inbound</span><span class="kcv">841</span></div>
       <div class="kcr"><span class="kclbl">Outbound</span><span class="kcv">824</span></div>
@@ -1035,7 +1035,7 @@ code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mo
       <div class="kcr"><span class="kclbl">Email analytics</span><span class="kcv c-txt3">Pending setup</span></div>
     </div>
   </div>
-  <div class="sl">Preprocessing — Individual Phone Performance (April 2026)</div>
+  <div class="sl">Preprocessing — Individual Phone Performance (__MONTH_YEAR__)</div>
   <div class="utbl-wrap">
     <table class="utbl">
       <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
