@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Alltech National Title — April 2026 Ops Scorecard</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f0f2f5;--s1:#ffffff;--s2:#f7f8fb;--s3:#edf0f5;
+  --b1:#e0e4ee;--b2:#cdd2e0;
+  --txt:#1a1d27;--txt2:#4a5068;--txt3:#8b90a8;
+  --orange:#f07814;--orange2:rgba(240,120,20,.09);--orange3:rgba(240,120,20,.2);
+  --navy:#28288c;--navy2:rgba(40,40,140,.08);--navy3:rgba(40,40,140,.2);
+  --green:#1a9e52;--green2:rgba(26,158,82,.08);--green3:rgba(26,158,82,.2);
+  --yellow:#b87000;--yellow2:rgba(184,112,0,.08);--yellow3:rgba(184,112,0,.2);
+  --red:#c42b2b;--red2:rgba(196,43,43,.08);--red3:rgba(196,43,43,.2);
+  --blue:#1864d4;--blue2:rgba(24,100,212,.08);--blue3:rgba(24,100,212,.2);
+  --purple:#7c3aed;--purple2:rgba(124,58,237,.08);--purple3:rgba(124,58,237,.2);
+  --mono:"JetBrains Mono",monospace;--display:"Syne",sans-serif;--body:"Outfit",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--txt);font-family:var(--body);font-size:13px;min-height:100vh;}
+.topbar{background:var(--s1);border-bottom:1px solid var(--b1);padding:0 28px;position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+.topbar-inner{max-width:1480px;margin:0 auto;display:flex;align-items:stretch;}
+.brand{padding:10px 20px 10px 0;border-right:1px solid var(--b1);margin-right:16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.brand-logo{display:flex;align-items:center;}
+.brand-abox{width:34px;height:34px;background:var(--orange);border-radius:5px 0 0 5px;display:flex;align-items:center;justify-content:center;}
+.brand-tbox{background:var(--s1);border:1.5px solid var(--b1);border-left:none;border-radius:0 5px 5px 0;padding:0 10px;height:34px;display:flex;flex-direction:column;justify-content:center;}
+.brand-wm{display:flex;align-items:baseline;line-height:1;}
+.b-all{font-family:var(--display);font-size:13px;font-weight:800;color:var(--txt3);}
+.b-tech{font-family:var(--display);font-size:13px;font-weight:800;color:var(--navy);}
+.b-sub{font-family:var(--mono);font-size:7.5px;letter-spacing:.2em;color:var(--txt3);text-transform:uppercase;}
+.brand-info{margin-left:14px;border-left:1px solid var(--b1);padding-left:14px;}
+.bi-title{font-family:var(--display);font-size:12px;font-weight:700;color:var(--txt);}
+.bi-sub{font-family:var(--mono);font-size:9px;color:var(--txt3);}
+.tabs{display:flex;align-items:stretch;flex:1;overflow-x:auto;}
+.tabs::-webkit-scrollbar{display:none;}
+.tab-btn{padding:0 13px;display:flex;align-items:center;gap:6px;cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;font-size:11.5px;font-weight:500;color:var(--txt3);transition:all .15s;white-space:nowrap;font-family:var(--body);}
+.tab-btn:hover{color:var(--txt2);background:var(--s2);}
+.tab-btn.active{color:var(--navy);border-bottom-color:var(--orange);font-weight:600;}
+.tab-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.tab-n{font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:3px;font-weight:600;background:var(--s3);color:var(--txt3);}
+.tab-btn.active .tab-n{background:var(--orange2);color:var(--orange);}
+.page{max-width:1480px;margin:0 auto;padding:24px 28px 64px;}
+.tab-pane{display:none;animation:fu .2s ease;}
+.tab-pane.active{display:block;}
+@keyframes fu{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.sl{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--txt3);margin:26px 0 12px;display:flex;align-items:center;gap:10px;}
+.sl::after{content:"";flex:1;height:1px;background:var(--b1);}
+.sl:first-child{margin-top:0;}
+.g6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.g7{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
+.tile{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:16px 18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.tt{position:absolute;top:0;left:0;right:0;height:3px;}
+.tv{font-family:var(--mono);font-size:22px;font-weight:600;line-height:1;margin-bottom:5px;}
+.tl{font-size:11px;color:var(--txt2);}
+.ts{font-family:var(--mono);font-size:10px;color:var(--txt3);margin-top:5px;}
+.ti{font-size:18px;margin-bottom:6px;}
+.kc{background:var(--s1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.kch{padding:10px 14px;border-bottom:1px solid var(--b1);font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--txt3);background:var(--s2);}
+.kcr{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid var(--b1);}
+.kcr:last-child{border-bottom:none;}
+.kcr:hover{background:var(--s2);}
+.kclbl{font-size:11px;color:var(--txt2);}
+.kcv{font-family:var(--mono);font-size:12px;font-weight:600;}
+.bar-wrap{height:5px;background:var(--s3);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;}
+.tag{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:4px;font-weight:600;letter-spacing:.04em;}
+.tg{background:var(--green2);color:var(--green);border:1px solid var(--green3);}
+.ty{background:var(--yellow2);color:var(--yellow);border:1px solid var(--yellow3);}
+.tr{background:var(--red2);color:var(--red);border:1px solid var(--red3);}
+.tb{background:var(--blue2);color:var(--blue);border:1px solid var(--blue3);}
+.to{background:var(--orange2);color:var(--orange);border:1px solid var(--orange3);}
+.tp{background:var(--purple2);color:var(--purple);border:1px solid var(--purple3);}
+.utbl-wrap{background:var(--s1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.utbl{width:100%;border-collapse:collapse;}
+.utbl th{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3);padding:10px 12px;text-align:left;border-bottom:1px solid var(--b2);background:var(--s2);white-space:nowrap;}
+.utbl td{padding:8px 12px;font-size:11px;border-bottom:1px solid var(--b1);}
+.utbl tr:last-child td{border-bottom:none;}
+.utbl tr:hover td{background:var(--s2);}
+.mn{font-family:var(--mono);}
+.bold{font-weight:600;color:var(--txt);}
+.c-green{color:var(--green);}.c-yellow{color:var(--yellow);}.c-red{color:var(--red);}
+.c-navy{color:var(--navy);}.c-orange{color:var(--orange);}.c-purple{color:var(--purple);}
+.c-txt2{color:var(--txt2);}.c-txt3{color:var(--txt3);}
+.rh{background:var(--s1);border:1px solid var(--b1);border-radius:12px;padding:20px 22px;display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.rh-left{display:flex;gap:14px;align-items:center;}
+.rh-av{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:14px;}
+.rh-name{font-family:var(--display);font-size:18px;font-weight:800;line-height:1;}
+.rh-mgr{font-size:12px;color:var(--txt2);margin-top:3px;}
+.rh-br{font-family:var(--mono);font-size:10px;color:var(--txt3);margin-top:2px;}
+.rh-stats{display:flex;gap:20px;align-items:flex-end;}
+.rh-sv{font-family:var(--mono);font-size:20px;font-weight:600;line-height:1;}
+.rh-sl{font-size:10px;color:var(--txt3);margin-top:3px;}
+.pc-wrap{background:var(--s1);border:1px solid var(--b1);border-radius:12px;padding:20px 22px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.pc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+.pc-val{font-family:var(--mono);font-size:24px;font-weight:600;line-height:1;}
+.pc-lbl{font-size:11px;color:var(--txt2);margin-top:4px;}
+.pc-sub{font-family:var(--mono);font-size:9px;color:var(--txt3);margin-top:3px;}
+.task-card{background:var(--s1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.task-head{padding:12px 14px;border-bottom:1px solid var(--b1);background:var(--s2);}
+.task-region{font-family:var(--display);font-size:12px;font-weight:700;color:var(--txt);}
+.task-mgr{font-size:10px;color:var(--txt3);margin-top:1px;font-family:var(--mono);}
+.task-metrics{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--b1);}
+.task-metric{padding:10px 14px;border-right:1px solid var(--b1);}
+.task-metric:last-child{border-right:none;}
+.task-mval{font-family:var(--mono);font-size:17px;font-weight:600;line-height:1;}
+.task-mlbl{font-size:9px;color:var(--txt3);margin-top:3px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;}
+.task-bar-row{padding:8px 14px;border-bottom:1px solid var(--b1);}
+.task-bl{display:flex;justify-content:space-between;font-size:9px;color:var(--txt3);margin-bottom:4px;font-family:var(--mono);}
+.task-items{padding:8px 14px;}
+.task-item{display:flex;gap:7px;align-items:flex-start;padding:4px 0;border-bottom:1px solid var(--b1);font-size:11px;color:var(--txt2);}
+.task-item:last-child{border-bottom:none;}
+.task-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:4px;background:var(--red);}
+.footnote{margin-top:32px;padding-top:16px;border-top:1px solid var(--b1);font-family:var(--mono);font-size:10px;color:var(--txt3);line-height:1.9;}
+.infobox{background:var(--s2);border:1px solid var(--b2);border-radius:10px;padding:14px 18px;font-size:11px;color:var(--txt2);line-height:1.8;}
+.infobox strong{color:var(--txt);}
+code{background:var(--s3);padding:1px 5px;border-radius:3px;font-family:var(--mono);font-size:10px;color:var(--navy);}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">
+        <div class="brand-abox">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <path d="M2 17L10 3L18 17" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 12H14.5" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-tbox">
+          <div class="brand-wm"><span class="b-all">ALL</span><span class="b-tech">TECH</span></div>
+          <div class="b-sub">National Title</div>
+        </div>
+      </div>
+      <div class="brand-info">
+        <div class="bi-title">April 2026</div>
+        <div class="bi-sub">Operational Scorecard</div>
+      </div>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('coo',this)"><span class="tab-dot" style="background:var(--orange)"></span>COO Overview<span class="tab-n">7 regions</span></button>
+      <button class="tab-btn" onclick="switchTab('dmv',this)"><span class="tab-dot" style="background:var(--yellow)"></span>DMV<span class="tab-n">85 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('pa',this)"><span class="tab-dot" style="background:var(--navy)"></span>PA<span class="tab-n">45 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('il',this)"><span class="tab-dot" style="background:var(--red)"></span>IL<span class="tab-n">9 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('wi',this)"><span class="tab-dot" style="background:var(--green)"></span>WI<span class="tab-n">143 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('tx',this)"><span class="tab-dot" style="background:var(--red)"></span>TX<span class="tab-n">3 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('ptg',this)"><span class="tab-dot" style="background:var(--green)"></span>Potomac<span class="tab-n">109 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('dtg',this)"><span class="tab-dot" style="background:var(--navy)"></span>Dupont<span class="tab-n">22 closed</span></button>
+      <button class="tab-btn" onclick="switchTab('prep',this)"><span class="tab-dot" style="background:var(--purple)"></span>Preprocessing<span class="tab-n">17 staff</span></button>
+    </div>
+  </div>
+</div>
+<div class="page">
+
+<div id="tab-coo" class="tab-pane active">
+
+<div class="sl">Production — April 2026 (Qualia MTD)</div>
+<div class="g6" style="margin-bottom:20px;">
+  <div class="tile"><div class="tt" style="background:var(--navy)"></div><div class="ti">📂</div><div class="tv c-navy">667</div><div class="tl">MTD Files Opened</div><div class="ts">7 branches combined</div></div>
+  <div class="tile"><div class="tt" style="background:var(--green)"></div><div class="ti">✅</div><div class="tv c-green">416</div><div class="tl">MTD Files Closed</div><div class="ts">Net pipeline: +251 open</div></div>
+  <div class="tile"><div class="tt" style="background:var(--yellow)"></div><div class="ti">🎯</div><div class="tv c-yellow">62%</div><div class="tl">Closing Ratio</div><div class="ts">Target: 85%</div></div>
+  <div class="tile"><div class="tt" style="background:var(--navy)"></div><div class="ti">💰</div><div class="tv c-navy">$1,007,742</div><div class="tl">Total Revenue</div><div class="ts">Avg $2,423/file</div></div>
+  <div class="tile"><div class="tt" style="background:var(--red)"></div><div class="ti">⚠️</div><div class="tv c-red">$10,129</div><div class="tl">Total Errors</div><div class="ts">1.0% of revenue · Target &lt;0.5%</div></div>
+  <div class="tile"><div class="tt" style="background:var(--orange)"></div><div class="ti">📋</div><div class="tv c-orange">82.9%</div><div class="tl">Files w/ Open Tasks</div><div class="ts">335 / 404 closed files</div></div>
+</div>
+
+<div class="sl">Phone Analytics — RingCentral (April 2026 · Full Month · Company-Wide)</div>
+<div class="pc-wrap" style="margin-bottom:20px;">
+  <div style="font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--txt3);margin-bottom:16px;">Company · 5,417 Total Calls · April 1–30, 2026</div>
+  <div class="pc-grid">
+    <div><div class="pc-val c-navy">5,417</div><div class="pc-lbl">Total Calls</div><div class="pc-sub">180.6 avg/day</div></div>
+    <div><div class="pc-val c-navy">3,383</div><div class="pc-lbl">Total Inbound</div><div class="pc-sub">2,034 outbound</div></div>
+    <div>
+      <div class="pc-val c-green">40.3%</div>
+      <div class="pc-lbl">% Calls Completed</div>
+      <div class="pc-sub">1,365 answered · target 70%+</div>
+      <div style="margin-top:8px;"><div class="bar-wrap"><div class="bar-fill" style="width:40.3%;background:var(--green)"></div></div></div>
+    </div>
+    <div>
+      <div class="pc-val c-red">59.7%</div>
+      <div class="pc-lbl">% Calls Missed</div>
+      <div class="pc-sub">2,018 missed · target &lt;30%</div>
+      <div style="margin-top:8px;"><div class="bar-wrap"><div class="bar-fill" style="width:59.7%;background:var(--red)"></div></div></div>
+    </div>
+    <div><div class="pc-val c-txt2">3m 06s</div><div class="pc-lbl">Avg Handle Time</div><div class="pc-sub">When answered</div></div>
+  </div>
+</div>
+
+
+<div class="sl">Phone Analytics — % Completed &amp; % Missed by Region (April 2026)</div>
+<div class="g7" style="margin-bottom:20px;">
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--green);padding-left:11px;">PTG</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">0</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">1</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-red">0.0%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-red">100.0%</span></div>
+    <div style="padding:8px 14px;"><span class="tag tr">Critical</span></div>
+  </div>
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--yellow);padding-left:11px;">DMV</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1,279</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">414</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-yellow">401</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-yellow">50.8%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-yellow">49.2%</span></div>
+    <div style="padding:8px 14px;"><span class="tag tr">High miss</span></div>
+  </div>
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--green);padding-left:11px;">WI</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">154</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">123</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">20</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-green">86.0%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-green">14.0%</span></div>
+    <div style="padding:8px 14px;"><span class="tag tg">Best ✓</span></div>
+  </div>
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--navy);padding-left:11px;">PA</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1,285</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">474</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">140</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-green">77.2%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-green">22.8%</span></div>
+    <div style="padding:8px 14px;"><span class="tag tg">On target ✓</span></div>
+  </div>
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--navy);padding-left:11px;">DTG</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">0</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">0</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">0</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-red">0.0%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-green">0.0%</span></div>
+    <div style="padding:8px 14px;"><span class="tag tb">No RC data</span></div>
+  </div>
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--red);padding-left:11px;">IL</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">95</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">36</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">52</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-red">40.9%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-red">59.1%</span></div>
+    <div style="padding:8px 14px;"><span class="tag tr">Needs attn</span></div>
+  </div>
+  <div class="kc">
+    <div class="kch" style="border-left:3px solid var(--red);padding-left:11px;">TX</div>
+    <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">159</span></div>
+    <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">60</span></div>
+    <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-yellow">46</span></div>
+    <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-yellow">56.6%</span></div>
+    <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-yellow">43.4%</span></div>
+    <div style="padding:8px 14px;"><span class="tag ty">Monitor</span></div>
+  </div>
+</div>
+
+<div class="sl">Task Completion — AI QC &amp; Total Tasks per Region (Qualia · April 2026)</div>
+<div class="g5" style="margin-bottom:20px;">
+  <div class="task-card">
+    <div class="task-head">
+      <div class="task-region">DMV</div>
+      <div class="task-mgr">Penelope Vockel</div>
+    </div>
+    <div class="task-metrics">
+      <div class="task-metric">
+        <div class="task-mval c-red">3.4%</div>
+        <div class="task-mlbl">AI QC Complete</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">7 / 203 files</div>
+      </div>
+      <div class="task-metric">
+        <div class="task-mval c-red">8.9%</div>
+        <div class="task-mlbl">All Tasks Clear</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">18 / 203 files</div>
+      </div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>AI QC</span><span>7/203</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:3.4%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>Total Tasks</span><span>18/203 fully clear</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:8.9%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Generate 1099</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Verify 1099 information</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order/Receive Title Bringdown</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Schedule Closing</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>QC and Scan File</div></div>
+  </div>
+  <div class="task-card">
+    <div class="task-head">
+      <div class="task-region">Wisconsin</div>
+      <div class="task-mgr">Victoria Nitecki</div>
+    </div>
+    <div class="task-metrics">
+      <div class="task-metric">
+        <div class="task-mval c-green">22.9%</div>
+        <div class="task-mlbl">AI QC Complete</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">33 / 144 files</div>
+      </div>
+      <div class="task-metric">
+        <div class="task-mval c-red">0.0%</div>
+        <div class="task-mlbl">All Tasks Clear</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">0 / 144 files</div>
+      </div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>AI QC</span><span>33/144</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:22.9%;background:var(--green)"></div></div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>Total Tasks</span><span>0/144 fully clear</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Bringdown</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Post Revenue / Disburse / Close</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Review recording docs</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Receive Recorded Documents</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Title Bringdown</div></div>
+  </div>
+  <div class="task-card">
+    <div class="task-head">
+      <div class="task-region">Pennsylvania</div>
+      <div class="task-mgr">Debra Pattis</div>
+    </div>
+    <div class="task-metrics">
+      <div class="task-metric">
+        <div class="task-mval c-red">0.0%</div>
+        <div class="task-mlbl">AI QC Complete</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">0 / 47 files</div>
+      </div>
+      <div class="task-metric">
+        <div class="task-mval c-red">12.8%</div>
+        <div class="task-mlbl">All Tasks Clear</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">6 / 47 files</div>
+      </div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>AI QC</span><span>0/47</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>Total Tasks</span><span>6/47 fully clear</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:12.8%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-items"><div style="font-family:var(--mono);font-size:9px;color:var(--orange);padding:4px 0 6px;border-bottom:1px solid var(--b1);">⚠ AI QC not in Qualia template — add now</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Confirm Policy Type</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Enhanced / Basic Form</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>File QC Review</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Bringdowns</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Payoffs</div></div>
+  </div>
+  <div class="task-card">
+    <div class="task-head">
+      <div class="task-region">Illinois</div>
+      <div class="task-mgr">Elena Gallo</div>
+    </div>
+    <div class="task-metrics">
+      <div class="task-metric">
+        <div class="task-mval c-green">25.0%</div>
+        <div class="task-mlbl">AI QC Complete</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">2 / 8 files</div>
+      </div>
+      <div class="task-metric">
+        <div class="task-mval c-green">75.0%</div>
+        <div class="task-mlbl">All Tasks Clear</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">6 / 8 files</div>
+      </div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>AI QC</span><span>2/8</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:25.0%;background:var(--green)"></div></div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>Total Tasks</span><span>6/8 fully clear</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:75.0%;background:var(--green)"></div></div>
+    </div>
+    <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Funding & Disbursement</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Process Recording</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>County Tax Verification</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Title Bringdown</div></div>
+  </div>
+  <div class="task-card">
+    <div class="task-head">
+      <div class="task-region">Texas</div>
+      <div class="task-mgr">Lisa Garza</div>
+    </div>
+    <div class="task-metrics">
+      <div class="task-metric">
+        <div class="task-mval c-red">0.0%</div>
+        <div class="task-mlbl">AI QC Complete</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">0 / 2 files</div>
+      </div>
+      <div class="task-metric">
+        <div class="task-mval c-red">0.0%</div>
+        <div class="task-mlbl">All Tasks Clear</div>
+        <div style="font-size:9px;color:var(--txt3);margin-top:2px;">0 / 2 files</div>
+      </div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>AI QC</span><span>0/2</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-bar-row">
+      <div class="task-bl"><span>Total Tasks</span><span>0/2 fully clear</span></div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+    </div>
+    <div class="task-items"><div style="font-family:var(--mono);font-size:9px;color:var(--orange);padding:4px 0 6px;border-bottom:1px solid var(--b1);">⚠ AI QC not in Qualia template — add now</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Generate 1099</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Submit Title Package</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Balance File</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Order Deed</div></div>
+  </div>
+</div>
+
+<div class="sl">All Users — Phone Performance (April 2026 Full Month)</div>
+<div class="utbl-wrap" style="margin-bottom:20px;">
+  <table class="utbl">
+    <thead><tr><th>Name</th><th>Region</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+    <tbody id="aub"></tbody>
+  </table>
+</div>
+
+<div class="sl">Email Response Time Analytics — Options for Microsoft 365</div>
+<div class="g3" style="margin-bottom:12px;">
+  <div class="kc">
+    <div class="kch" style="color:var(--green);">★ Recommended — Check First</div>
+    <div style="padding:14px;">
+      <div style="font-family:var(--display);font-size:12px;font-weight:700;color:var(--txt);margin-bottom:8px;">Microsoft Viva Insights — Graph API</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.7;">Standard Viva dashboard doesn't show per-user response times — but the <strong>Graph API endpoint</strong> does. Ask IT to enable <code>/v1.0/users/{id}/insights</code>. Returns avg response time, email volume, collaboration hours per user. Free with M365 E3/E5.</div>
+      <div style="margin-top:10px;"><span class="tag tg">Free · M365 E3/E5</span></div>
+    </div>
+  </div>
+  <div class="kc">
+    <div class="kch">Fastest Setup · Paid</div>
+    <div style="padding:14px;">
+      <div style="font-family:var(--display);font-size:12px;font-weight:700;color:var(--txt);margin-bottom:8px;">EmailAnalytics (emailanalytics.com)</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.7;">Purpose-built per-user response time tracking. Connects each user's Outlook via OAuth. Avg response time, emails sent/received, busiest hours. Manager dashboards + individual scorecards. No IT needed — users connect their own Outlook. Data within 24 hours.</div>
+      <div style="margin-top:10px;"><span class="tag ty">$15–19/user/mo · No IT needed</span></div>
+    </div>
+  </div>
+  <div class="kc">
+    <div class="kch">Free · IT Required</div>
+    <div style="padding:14px;">
+      <div style="font-family:var(--display);font-size:12px;font-weight:700;color:var(--txt);margin-bottom:8px;">Power Automate + Graph API</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.7;">IT enables <code>Mail.Read</code> + admin consent. Power Automate queries sent/received timestamps on schedule, calculates avg response time, writes to SharePoint. Free — 2–4 hrs IT setup required per user mailbox.</div>
+      <div style="margin-top:10px;"><span class="tag tb">Free · IT setup 2–4 hrs</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="sl">Monthly Scorecard Automation Roadmap</div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--green);background:rgba(green,.1, .1);border:1px solid rgba(green,.2, .2);">1</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">Power Automate Scheduled Trigger — 1st of month, 8:00am</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">Already approved by IT. Schedule trigger configured.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag tg">Complete ✓</span> <span class="tag tg">Power Automate</span></div>
+    </div>
+  </div>
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--yellow);background:rgba(yellow,.1, .1);border:1px solid rgba(yellow,.2, .2);">2</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">Qualia MTD Reports → Auto-export via email to SharePoint</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">Ask Qualia admin to auto-deliver MTD Closed + Open reports monthly. Power Automate picks up via Outlook trigger.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag ty">Qualia Admin needed</span></div>
+    </div>
+  </div>
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--yellow);background:rgba(yellow,.1, .1);border:1px solid rgba(yellow,.2, .2);">3</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">RingCentral API → Monthly Phone Stats per User</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">RC REST API analytics endpoint returns per-user stats for any date range. Need API key from RC Admin → Developer Portal.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag ty">RingCentral Admin</span> <span class="tag ty">API key needed</span></div>
+    </div>
+  </div>
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--red);background:rgba(red,.1, .1);border:1px solid rgba(red,.2, .2);">4</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">Email Response Time per User — Graph API or EmailAnalytics</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">See options above. IT enables Graph API (free) or start EmailAnalytics trial.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag tr">IT approval needed</span></div>
+    </div>
+  </div>
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--orange);background:rgba(orange,.1, .1);border:1px solid rgba(orange,.2, .2);">5</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">Add AI QC Task to PA + TX Qualia Templates</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">PA and TX show 0% AI QC because the task is missing from their workflow templates. Add in Qualia Settings → Workflow Templates.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag to">PA + TX affected</span></div>
+    </div>
+  </div>
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--blue);background:rgba(blue,.1, .1);border:1px solid rgba(blue,.2, .2);">6</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">Claude API Generates Personalized Scorecard per EO</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">Power Automate sends all data to Claude. Claude generates HTML scorecard per region and per escrow officer.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag tb">API Key Active ✓</span> <span class="tag tb">Ready to build</span></div>
+    </div>
+  </div>
+  <div class="kc" style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;">
+    <div style="width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;flex-shrink:0;color:var(--blue);background:rgba(blue,.1, .1);border:1px solid rgba(blue,.2, .2);">7</div>
+    <div style="flex:1;">
+      <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:3px;">Power Automate Sends Scorecard to Each Manager + EO</div>
+      <div style="font-size:11px;color:var(--txt2);line-height:1.6;margin-bottom:6px;">Delivers personalized scorecard by email on 1st of every month. Region view for managers, individual stats for each EO.</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag tb">Outlook Connected ✓</span> <span class="tag tb">Template needed</span></div>
+    </div>
+  </div>
+</div>
+<div class="footnote">
+  Data: Qualia MTD (May 1, 2026) · RingCentral Monthly (April 1–30, 2026) · Expense Transfers April 2026 · ATG April Metrics (AI QC + Task data)<br>
+  ⚠ PA and TX AI QC not configured in Qualia templates · ⚠ April P&L pending — financials excluded · See Ross English for financial dashboard<br>
+  Prepared by: Hope Ottoviani, COO · Alltech National Title · May 2026
+</div>
+</div>
+
+<div id="tab-dmv" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--yellow)18;color:var(--yellow);">DMV</div>
+      <div>
+        <div class="rh-name">ATG Title DMV</div>
+        <div class="rh-mgr">Penelope Vockel · State Manager</div>
+        <div class="rh-br">Haymarket · Annapolis · Rockville</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">149</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">85</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-yellow">57%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$241,665</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-green">$896</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">149</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">85</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+64</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-yellow">57% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$241,665</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,843</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-green">$896</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-green">0.37% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1,279</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-yellow">414</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-yellow">401</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-yellow" style="font-weight:700;">50.8%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-yellow" style="font-weight:700;">49.2% ⚠️</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">3m 29s</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion · Qualia</div>
+      <div class="kcr"><span class="kclbl">AI QC Complete</span><span class="kcv c-red">3.4% (7/203)</span></div>
+      <div class="kcr"><span class="kclbl">All Tasks Clear</span><span class="kcv c-red">8.9% (18/203)</span></div>
+      <div style="padding:8px 14px;">
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin-bottom:3px;">AI QC</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:3.4%;background:var(--red)"></div></div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin:5px 0 3px;">All Tasks</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:8.9%;background:var(--red)"></div></div>
+      </div>
+      
+      <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Generate 1099</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Verify 1099 info</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order/Receive Title Bringdown</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Schedule Closing</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>QC and Scan File</div></div>
+    </div>
+  </div>
+  <div class="sl">DMV — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Jean Michaud</td><td class="mn">620</td><td class="mn">494</td><td class="mn">252</td><td class="mn">242</td><td class="mn c-green">130</td><td class="mn c-yellow">122</td><td class="mn c-yellow" style="font-weight:600;">51.6%</td><td class="mn c-yellow" style="font-weight:600;">48.4%</td><td class="mn">2m 06s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Annette Clements</td><td class="mn">716</td><td class="mn">385</td><td class="mn">253</td><td class="mn">132</td><td class="mn c-green">139</td><td class="mn c-yellow">114</td><td class="mn c-yellow" style="font-weight:600;">54.9%</td><td class="mn c-yellow" style="font-weight:600;">45.1%</td><td class="mn">5m 15s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Kyle Hayden</td><td class="mn">7119</td><td class="mn">147</td><td class="mn">90</td><td class="mn">57</td><td class="mn c-green">55</td><td class="mn c-yellow">35</td><td class="mn c-yellow" style="font-weight:600;">61.1%</td><td class="mn c-yellow" style="font-weight:600;">38.9%</td><td class="mn">3m 00s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Auzhane Shaw</td><td class="mn">126</td><td class="mn">134</td><td class="mn">119</td><td class="mn">15</td><td class="mn c-green">57</td><td class="mn c-red">62</td><td class="mn c-red" style="font-weight:600;">47.9%</td><td class="mn c-red" style="font-weight:600;">52.1%</td><td class="mn">2m 55s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Souk Phommasack</td><td class="mn">604</td><td class="mn">23</td><td class="mn">23</td><td class="mn">0</td><td class="mn c-green">6</td><td class="mn c-red">17</td><td class="mn c-red" style="font-weight:600;">26.1%</td><td class="mn c-red" style="font-weight:600;">73.9%</td><td class="mn">5m 08s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Kelly Cook</td><td class="mn">626</td><td class="mn">22</td><td class="mn">17</td><td class="mn">5</td><td class="mn c-green">5</td><td class="mn c-red">12</td><td class="mn c-red" style="font-weight:600;">29.4%</td><td class="mn c-red" style="font-weight:600;">70.6%</td><td class="mn">4m 19s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Mark Somerville</td><td class="mn">127</td><td class="mn">20</td><td class="mn">20</td><td class="mn">0</td><td class="mn c-green">19</td><td class="mn c-green">1</td><td class="mn c-green" style="font-weight:600;">95.0%</td><td class="mn c-green" style="font-weight:600;">5.0%</td><td class="mn">0m 40s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Shammarie Stingl</td><td class="mn">116</td><td class="mn">17</td><td class="mn">6</td><td class="mn">11</td><td class="mn c-green">1</td><td class="mn c-red">5</td><td class="mn c-red" style="font-weight:600;">16.7%</td><td class="mn c-red" style="font-weight:600;">83.3%</td><td class="mn">2m 24s</td><td><span class="tag tr">Critical</span></td></tr>
+<tr><td class="bold">Michael Gross</td><td class="mn">605</td><td class="mn">16</td><td class="mn">16</td><td class="mn">0</td><td class="mn c-green">1</td><td class="mn c-red">15</td><td class="mn c-red" style="font-weight:600;">6.2%</td><td class="mn c-red" style="font-weight:600;">93.8%</td><td class="mn">7m 56s</td><td><span class="tag tr">Critical</span></td></tr>
+<tr><td class="bold">Monica Sulaimani</td><td class="mn">1060</td><td class="mn">12</td><td class="mn">11</td><td class="mn">1</td><td class="mn c-green">0</td><td class="mn c-red">11</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr>
+<tr><td class="bold">Liliana Andrade</td><td class="mn">109</td><td class="mn">6</td><td class="mn">6</td><td class="mn">0</td><td class="mn c-green">1</td><td class="mn c-red">5</td><td class="mn c-red" style="font-weight:600;">16.7%</td><td class="mn c-red" style="font-weight:600;">83.3%</td><td class="mn">7m 55s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Penelope Vockel</td><td class="mn">7121</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">No calls</span></td></tr>
+<tr><td class="bold">Robin Torrence</td><td class="mn">646</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">No calls</span></td></tr>
+<tr><td class="bold">Craig Garrison Jr.</td><td class="mn">7122</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">New hire Apr</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-pa" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--navy)18;color:var(--navy);">PA</div>
+      <div>
+        <div class="rh-name">Alltech National Settlements PA</div>
+        <div class="rh-mgr">Debra Pattis · State Manager</div>
+        <div class="rh-br">Pittsburgh, Pennsylvania</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">75</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">45</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-yellow">60%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$146,454</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-green">$529</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">75</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">45</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+30</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-yellow">60% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$146,454</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$3,255</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-green">$529</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-green">0.36% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1,285</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">474</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">140</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-green" style="font-weight:700;">77.2%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-green" style="font-weight:700;">22.8% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">1m 54s</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion · Qualia</div>
+      <div class="kcr"><span class="kclbl">AI QC Complete</span><span class="kcv c-red">0.0% (0/47)</span></div>
+      <div class="kcr"><span class="kclbl">All Tasks Clear</span><span class="kcv c-red">12.8% (6/47)</span></div>
+      <div style="padding:8px 14px;">
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin-bottom:3px;">AI QC</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin:5px 0 3px;">All Tasks</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:12.8%;background:var(--red)"></div></div>
+      </div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--orange);padding:4px 0 6px;border-bottom:1px solid var(--b1);">⚠ AI QC not configured in Qualia template</div>
+      <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Confirm Policy Type</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Enhanced / Basic Form</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>File QC Review</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Bringdowns</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Payoffs</div></div>
+    </div>
+  </div>
+  <div class="sl">PA — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Ken Chotiner</td><td class="mn">704</td><td class="mn">397</td><td class="mn">161</td><td class="mn">236</td><td class="mn c-green">118</td><td class="mn c-green">43</td><td class="mn c-green" style="font-weight:600;">73.3%</td><td class="mn c-green" style="font-weight:600;">26.7%</td><td class="mn">2m 35s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Dennis Linden</td><td class="mn">707</td><td class="mn">345</td><td class="mn">185</td><td class="mn">160</td><td class="mn c-green">152</td><td class="mn c-green">33</td><td class="mn c-green" style="font-weight:600;">82.2%</td><td class="mn c-green" style="font-weight:600;">17.8%</td><td class="mn">1m 39s</td><td><span class="tag tg">Best ✓</span></td></tr>
+<tr><td class="bold">Karen Stein</td><td class="mn">705</td><td class="mn">343</td><td class="mn">176</td><td class="mn">167</td><td class="mn c-green">141</td><td class="mn c-green">35</td><td class="mn c-green" style="font-weight:600;">80.1%</td><td class="mn c-green" style="font-weight:600;">19.9%</td><td class="mn">3m 28s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Samantha Routh</td><td class="mn">709</td><td class="mn">164</td><td class="mn">56</td><td class="mn">108</td><td class="mn c-green">44</td><td class="mn c-green">12</td><td class="mn c-green" style="font-weight:600;">78.6%</td><td class="mn c-green" style="font-weight:600;">21.4%</td><td class="mn">1m 45s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Debra Patti</td><td class="mn">708</td><td class="mn">26</td><td class="mn">26</td><td class="mn">0</td><td class="mn c-green">19</td><td class="mn c-green">7</td><td class="mn c-green" style="font-weight:600;">73.1%</td><td class="mn c-green" style="font-weight:600;">26.9%</td><td class="mn">2m 01s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Meredith Boyajy</td><td class="mn">665</td><td class="mn">10</td><td class="mn">10</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">10</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-il" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--red)18;color:var(--red);">IL</div>
+      <div>
+        <div class="rh-name">ATG National Title — Illinois</div>
+        <div class="rh-mgr">Elena Gallo · State Manager</div>
+        <div class="rh-br">Chicago, Illinois</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">22</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">9</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-red">41%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$25,184</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-green">$0</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">22</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">9</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+13</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-red">41% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$25,184</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,798</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-green">$0</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-green">0.00% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">95</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-red">36</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">52</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-red" style="font-weight:700;">40.9%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-red" style="font-weight:700;">59.1% 🚨</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">1m 34s</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion · Qualia</div>
+      <div class="kcr"><span class="kclbl">AI QC Complete</span><span class="kcv c-green">25.0% (2/8)</span></div>
+      <div class="kcr"><span class="kclbl">All Tasks Clear</span><span class="kcv c-green">75.0% (6/8)</span></div>
+      <div style="padding:8px 14px;">
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin-bottom:3px;">AI QC</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:25.0%;background:var(--green)"></div></div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin:5px 0 3px;">All Tasks</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:75.0%;background:var(--green)"></div></div>
+      </div>
+      
+      <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Funding & Disbursement</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Process Recording</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>County Tax Verification</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Title Bringdown</div></div>
+    </div>
+  </div>
+  <div class="sl">IL — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Alltech IL (main line)</td><td class="mn">617</td><td class="mn">62</td><td class="mn">61</td><td class="mn">1</td><td class="mn c-green">31</td><td class="mn c-yellow">30</td><td class="mn c-yellow" style="font-weight:600;">50.8%</td><td class="mn c-yellow" style="font-weight:600;">49.2%</td><td class="mn">1m 44s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Yasser Rouky</td><td class="mn">632</td><td class="mn">33</td><td class="mn">27</td><td class="mn">6</td><td class="mn c-green">5</td><td class="mn c-red">22</td><td class="mn c-red" style="font-weight:600;">18.5%</td><td class="mn c-red" style="font-weight:600;">81.5%</td><td class="mn">1m 24s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Elena Gallo</td><td class="mn">624</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">No calls</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-wi" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--green)18;color:var(--green);">WI</div>
+      <div>
+        <div class="rh-name">ATG National Title — Wisconsin</div>
+        <div class="rh-mgr">Victoria Nitecki · State Manager</div>
+        <div class="rh-br">Milwaukee · Waukesha · Greenfield</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">184</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">143</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-green">78%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$208,978</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-green">$71</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">184</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">143</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+41</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-green">78% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$208,978</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$1,461</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-green">$71</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-green">0.03% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">154</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">123</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-green">20</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-green" style="font-weight:700;">86.0%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-green" style="font-weight:700;">14.0% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">0m 16s</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion · Qualia</div>
+      <div class="kcr"><span class="kclbl">AI QC Complete</span><span class="kcv c-green">22.9% (33/144)</span></div>
+      <div class="kcr"><span class="kclbl">All Tasks Clear</span><span class="kcv c-red">0.0% (0/144)</span></div>
+      <div style="padding:8px 14px;">
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin-bottom:3px;">AI QC</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:22.9%;background:var(--green)"></div></div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin:5px 0 3px;">All Tasks</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+      </div>
+      
+      <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Bringdown</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Post Revenue / Disburse / Close</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Review recording docs</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Receive Recorded Docs</div><div class="task-item"><span class="task-dot" style="background:var(--yellow)"></span>Order Title Bringdown</div></div>
+    </div>
+  </div>
+  <div class="sl">WI — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Jennifer Wesolowski</td><td class="mn">718</td><td class="mn">145</td><td class="mn">134</td><td class="mn">11</td><td class="mn c-green">123</td><td class="mn c-green">11</td><td class="mn c-green" style="font-weight:600;">91.8%</td><td class="mn c-green" style="font-weight:600;">8.2%</td><td class="mn">1m 22s</td><td><span class="tag tg">Best company ✓</span></td></tr>
+<tr><td class="bold">Kim DeMartino</td><td class="mn">685</td><td class="mn">3</td><td class="mn">3</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">3</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr>
+<tr><td class="bold">Darci Froemming</td><td class="mn">684</td><td class="mn">2</td><td class="mn">2</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">2</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr>
+<tr><td class="bold">Lisa Basten</td><td class="mn">683</td><td class="mn">2</td><td class="mn">2</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">2</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr>
+<tr><td class="bold">Victoria Nitecki</td><td class="mn">715</td><td class="mn">2</td><td class="mn">2</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">2</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-tx" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--red)18;color:var(--red);">TX</div>
+      <div>
+        <div class="rh-name">ATG National Title — Austin TX</div>
+        <div class="rh-mgr">Lisa Garza · State Manager</div>
+        <div class="rh-br">Austin TX · Breakeven Target: June 2026</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">14</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">3</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-red">21%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$7,943</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-red">$3,056</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">14</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">3</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+11</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-red">21% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$7,943</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,648</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-red">$3,056</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-red">38.50% 🚨</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">159</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-yellow">60</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-yellow">46</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-yellow" style="font-weight:700;">56.6%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-yellow" style="font-weight:700;">43.4% ⚠️</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">4m 13s</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion · Qualia</div>
+      <div class="kcr"><span class="kclbl">AI QC Complete</span><span class="kcv c-red">0.0% (0/2)</span></div>
+      <div class="kcr"><span class="kclbl">All Tasks Clear</span><span class="kcv c-red">0.0% (0/2)</span></div>
+      <div style="padding:8px 14px;">
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin-bottom:3px;">AI QC</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin:5px 0 3px;">All Tasks</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:0.0%;background:var(--red)"></div></div>
+      </div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--orange);padding:4px 0 6px;border-bottom:1px solid var(--b1);">⚠ AI QC not configured in Qualia template</div>
+      <div class="task-items"><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Generate 1099</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Submit Title Package</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Balance File</div><div class="task-item"><span class="task-dot" style="background:var(--red)"></span>Order Deed</div></div>
+    </div>
+  </div>
+  <div class="sl">TX — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Monica Fuentes</td><td class="mn">728</td><td class="mn">108</td><td class="mn">61</td><td class="mn">47</td><td class="mn c-green">48</td><td class="mn c-green">13</td><td class="mn c-green" style="font-weight:600;">78.7%</td><td class="mn c-green" style="font-weight:600;">21.3%</td><td class="mn">3m 22s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Lisa Garza</td><td class="mn">729</td><td class="mn">51</td><td class="mn">45</td><td class="mn">6</td><td class="mn c-green">12</td><td class="mn c-red">33</td><td class="mn c-red" style="font-weight:600;">26.7%</td><td class="mn c-red" style="font-weight:600;">73.3%</td><td class="mn">5m 05s</td><td><span class="tag tr">High miss</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-ptg" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--green)18;color:var(--green);">PTG</div>
+      <div>
+        <div class="rh-name">Potomac Title Group (PTG)</div>
+        <div class="rh-mgr">Marti Watson · State Manager</div>
+        <div class="rh-br">Virginia · Maryland · 80% revenue arrangement</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">173</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">109</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-yellow">63%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$274,914</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-red">$5,577</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">173</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">109</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+64</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-yellow">63% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$274,914</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$2,522</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-red">$5,577</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-red">2.03% 🚨</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">1</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-red">0</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">1</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-red" style="font-weight:700;">0.0%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-red" style="font-weight:700;">100.0% 🚨</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">0m 00s</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion</div>
+      <div style="padding:14px;font-size:11px;color:var(--txt3);">Not in April QC report. Confirm with Qualia admin.</div>
+    </div>
+  </div>
+  <div class="sl">PTG — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Marti Watson</td><td class="mn">505</td><td class="mn">1</td><td class="mn">1</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">1</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">All missed</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-dtg" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--navy)18;color:var(--navy);">DTG</div>
+      <div>
+        <div class="rh-name">Dupont Title (DTG)</div>
+        <div class="rh-mgr">Ali Pournader · State Manager</div>
+        <div class="rh-br">Virginia · Maryland · 65/70% profit arrangement</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-navy">50</div><div class="rh-sl">MTD Opened</div></div>
+      <div><div class="rh-sv c-green">22</div><div class="rh-sl">MTD Closed</div></div>
+      <div><div class="rh-sv c-red">44%</div><div class="rh-sl">Close Ratio</div></div>
+      <div><div class="rh-sv c-navy">$102,654</div><div class="rh-sl">Revenue</div></div>
+      <div><div class="rh-sv c-green">$0</div><div class="rh-sl">Errors</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Production · April 2026</div>
+      <div class="kcr"><span class="kclbl">MTD Opened</span><span class="kcv c-navy">50</span></div>
+      <div class="kcr"><span class="kclbl">MTD Closed</span><span class="kcv c-green">22</span></div>
+      <div class="kcr"><span class="kclbl">Net Pipeline</span><span class="kcv">+28</span></div>
+      <div class="kcr"><span class="kclbl">Close Ratio</span><span class="kcv c-red">44% <span style="font-size:10px;color:var(--txt3);">tgt 85%</span></span></div>
+      <div class="kcr"><span class="kclbl">Revenue</span><span class="kcv c-navy">$102,654</span></div>
+      <div class="kcr"><span class="kclbl">Rev / File</span><span class="kcv">$4,666</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Errors &amp; Quality</div>
+      <div class="kcr"><span class="kclbl">April Errors</span><span class="kcv c-green">$0</span></div>
+      <div class="kcr"><span class="kclbl">Error % Revenue</span><span class="kcv c-green">0.00% ✓</span></div>
+      <div class="kcr"><span class="kclbl">Target</span><span class="kcv c-txt3">&lt;0.5%</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Phone · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv">0</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-txt3">0</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-txt3">0</span></div>
+      <div class="kcr"><span class="kclbl">% Completed</span><span class="kcv c-txt3" style="font-weight:700;">0.0%</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-txt3" style="font-weight:700;">0.0% </span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">—</span></div>
+    </div>
+    
+    <div class="kc">
+      <div class="kch">Task Completion</div>
+      <div style="padding:14px;font-size:11px;color:var(--txt3);">Not in April QC report. Confirm with Qualia admin.</div>
+    </div>
+  </div>
+  <div class="sl">DTG — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap" style="margin-bottom:16px;">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Nancy Garner</td><td class="mn">712</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">No RC calls</span></td></tr>
+<tr><td class="bold">Carlotta Jackson</td><td class="mn">—</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">No RC calls</span></td></tr>
+<tr><td class="bold">Silvia Vargas</td><td class="mn">—</td><td class="mn c-txt3" colspan="9">No calls logged</td><td><span class="tag tb">No RC calls</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="tab-prep" class="tab-pane">
+  <div class="rh">
+    <div class="rh-left">
+      <div class="rh-av" style="background:var(--purple2);color:var(--purple);">PRE</div>
+      <div>
+        <div class="rh-name">Preprocessing Department</div>
+        <div class="rh-mgr">Oumaima Rouky · Department Lead</div>
+        <div class="rh-br">Centralized pre-processing support · All regions</div>
+      </div>
+    </div>
+    <div class="rh-stats">
+      <div><div class="rh-sv c-purple">17</div><div class="rh-sl">Team Members</div></div>
+      <div><div class="rh-sv c-navy">1,665</div><div class="rh-sl">Total Calls</div></div>
+      <div><div class="rh-sv c-green">223</div><div class="rh-sl">Answered</div></div>
+      <div><div class="rh-sv c-red">618</div><div class="rh-sl">Missed</div></div>
+      <div><div class="rh-sv c-red">73.5%</div><div class="rh-sl">% Missed</div></div>
+    </div>
+  </div>
+  <div class="g4" style="margin-bottom:16px;">
+    <div class="kc">
+      <div class="kch">Phone Summary · April 2026</div>
+      <div class="kcr"><span class="kclbl">Total Calls</span><span class="kcv c-navy">1,665</span></div>
+      <div class="kcr"><span class="kclbl">Inbound</span><span class="kcv">841</span></div>
+      <div class="kcr"><span class="kclbl">Outbound</span><span class="kcv">824</span></div>
+      <div class="kcr"><span class="kclbl">Answered</span><span class="kcv c-green">223</span></div>
+      <div class="kcr"><span class="kclbl">Missed</span><span class="kcv c-red">618</span></div>
+      <div class="kcr"><span class="kclbl">% Missed</span><span class="kcv c-red">73.5% 🚨</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">% Completed vs % Missed</div>
+      <div class="kcr"><span class="kclbl">% Calls Completed</span><span class="kcv c-red" style="font-weight:700;">26.5%</span></div>
+      <div class="kcr"><span class="kclbl">% Calls Missed</span><span class="kcv c-red" style="font-weight:700;">73.5%</span></div>
+      <div style="padding:8px 14px;">
+        <div style="font-size:9px;font-family:var(--mono);color:var(--txt3);margin-bottom:3px;">Completed</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:26.5%;background:var(--red)"></div></div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--green);margin:5px 0 3px;">Target: 70%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:70%;background:var(--green);opacity:0.35;"></div></div>
+      </div>
+    </div>
+    <div class="kc">
+      <div class="kch">Team Highlights</div>
+      <div class="kcr"><span class="kclbl">Top Volume</span><span class="kcv c-red">Arrim El Haddad 🚨</span></div>
+      <div class="kcr"><span class="kclbl">Arrim miss rate</span><span class="kcv c-red">79.7% — routing issue?</span></div>
+      <div class="kcr"><span class="kclbl">Best Answer Rate</span><span class="kcv c-green">Laila Raoud 0%</span></div>
+      <div class="kcr"><span class="kclbl">Outbound-only</span><span class="kcv c-green">4 staff — correct ✓</span></div>
+      <div class="kcr"><span class="kclbl">Avg Handle</span><span class="kcv">3m 02s</span></div>
+    </div>
+    <div class="kc">
+      <div class="kch">Key Action Items</div>
+      <div class="kcr"><span class="kclbl">Review call routing</span><span class="kcv c-orange">Arrim's ext 7105</span></div>
+      <div class="kcr"><span class="kclbl">Coverage hours</span><span class="kcv">Are inbound hours covered?</span></div>
+      <div class="kcr"><span class="kclbl">Email analytics</span><span class="kcv c-txt3">Pending setup</span></div>
+    </div>
+  </div>
+  <div class="sl">Preprocessing — Individual Phone Performance (April 2026)</div>
+  <div class="utbl-wrap">
+    <table class="utbl">
+      <thead><tr><th>Name</th><th>Ext</th><th>Total</th><th>Inbound</th><th>Outbound</th><th>Answered</th><th>Missed</th><th>% Completed</th><th>% Missed</th><th>Avg Handle</th><th>Status</th></tr></thead>
+      <tbody><tr><td class="bold">Arrim El Haddad</td><td class="mn">7105</td><td class="mn">674</td><td class="mn">665</td><td class="mn">9</td><td class="mn c-green">135</td><td class="mn c-red">530</td><td class="mn c-red" style="font-weight:600;">20.3%</td><td class="mn c-red" style="font-weight:600;">79.7%</td><td class="mn">1m 50s</td><td><span class="tag tr">Critical 🚨</span></td></tr>
+<tr><td class="bold">Marlon Lucero</td><td class="mn">7115</td><td class="mn">163</td><td class="mn">11</td><td class="mn">152</td><td class="mn c-green">9</td><td class="mn c-green">2</td><td class="mn c-green" style="font-weight:600;">81.8%</td><td class="mn c-green" style="font-weight:600;">18.2%</td><td class="mn">5m 22s</td><td><span class="tag tg">Outbound ✓</span></td></tr>
+<tr><td class="bold">Chaimae Barri</td><td class="mn">635</td><td class="mn">132</td><td class="mn">41</td><td class="mn">91</td><td class="mn c-green">34</td><td class="mn c-green">7</td><td class="mn c-green" style="font-weight:600;">82.9%</td><td class="mn c-green" style="font-weight:600;">17.1%</td><td class="mn">3m 27s</td><td><span class="tag tg">Good ✓</span></td></tr>
+<tr><td class="bold">Nary El Khayyam</td><td class="mn">7118</td><td class="mn">108</td><td class="mn">21</td><td class="mn">87</td><td class="mn c-green">12</td><td class="mn c-yellow">9</td><td class="mn c-yellow" style="font-weight:600;">57.1%</td><td class="mn c-yellow" style="font-weight:600;">42.9%</td><td class="mn">3m 48s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Laila Raoud</td><td class="mn">7120</td><td class="mn">100</td><td class="mn">0</td><td class="mn">100</td><td class="mn c-green">100</td><td class="mn c-green">0</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-green" style="font-weight:600;">0.0%</td><td class="mn">3m 36s</td><td><span class="tag tg">Outbound ✓</span></td></tr>
+<tr><td class="bold">Ichrak Boulmane</td><td class="mn">627</td><td class="mn">74</td><td class="mn">9</td><td class="mn">65</td><td class="mn c-green">3</td><td class="mn c-red">6</td><td class="mn c-red" style="font-weight:600;">33.3%</td><td class="mn c-red" style="font-weight:600;">66.7%</td><td class="mn">4m 06s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Rajae Kamraoui</td><td class="mn">660</td><td class="mn">73</td><td class="mn">12</td><td class="mn">61</td><td class="mn c-green">3</td><td class="mn c-red">9</td><td class="mn c-red" style="font-weight:600;">25.0%</td><td class="mn c-red" style="font-weight:600;">75.0%</td><td class="mn">4m 15s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Amanda Miller</td><td class="mn">7101</td><td class="mn">67</td><td class="mn">16</td><td class="mn">51</td><td class="mn c-green">2</td><td class="mn c-red">14</td><td class="mn c-red" style="font-weight:600;">12.5%</td><td class="mn c-red" style="font-weight:600;">87.5%</td><td class="mn">3m 18s</td><td><span class="tag tr">High miss 🚨</span></td></tr>
+<tr><td class="bold">Stacey Brown</td><td class="mn">7114</td><td class="mn">57</td><td class="mn">6</td><td class="mn">51</td><td class="mn c-green">3</td><td class="mn c-red">3</td><td class="mn c-yellow" style="font-weight:600;">50.0%</td><td class="mn c-red" style="font-weight:600;">50.0%</td><td class="mn">4m 22s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Samia Idhmida</td><td class="mn">663</td><td class="mn">50</td><td class="mn">0</td><td class="mn">50</td><td class="mn c-green">50</td><td class="mn c-green">0</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-green" style="font-weight:600;">0.0%</td><td class="mn">3m 49s</td><td><span class="tag tg">Outbound ✓</span></td></tr>
+<tr><td class="bold">Chaimaa Bezzari</td><td class="mn">7116</td><td class="mn">47</td><td class="mn">26</td><td class="mn">21</td><td class="mn c-green">14</td><td class="mn c-yellow">12</td><td class="mn c-yellow" style="font-weight:600;">53.8%</td><td class="mn c-yellow" style="font-weight:600;">46.2%</td><td class="mn">1m 49s</td><td><span class="tag ty">Monitor</span></td></tr>
+<tr><td class="bold">Fatima Elouissi</td><td class="mn">7107</td><td class="mn">46</td><td class="mn">3</td><td class="mn">43</td><td class="mn c-green">3</td><td class="mn c-green">0</td><td class="mn c-green" style="font-weight:600;">100.0%</td><td class="mn c-green" style="font-weight:600;">0.0%</td><td class="mn">3m 17s</td><td><span class="tag tg">Outbound ✓</span></td></tr>
+<tr><td class="bold">JP Ricohermoso</td><td class="mn">720</td><td class="mn">40</td><td class="mn">23</td><td class="mn">17</td><td class="mn c-green">5</td><td class="mn c-red">18</td><td class="mn c-red" style="font-weight:600;">21.7%</td><td class="mn c-red" style="font-weight:600;">78.3%</td><td class="mn">2m 10s</td><td><span class="tag tr">High miss</span></td></tr>
+<tr><td class="bold">Kaoutar Essalehy</td><td class="mn">653</td><td class="mn">21</td><td class="mn">0</td><td class="mn">21</td><td class="mn c-green">21</td><td class="mn c-green">0</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-green" style="font-weight:600;">0.0%</td><td class="mn">4m 06s</td><td><span class="tag tg">Outbound ✓</span></td></tr>
+<tr><td class="bold">Zak Labsir</td><td class="mn">113</td><td class="mn">11</td><td class="mn">6</td><td class="mn">5</td><td class="mn c-green">0</td><td class="mn c-red">6</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">2m 26s</td><td><span class="tag tr">All inbound missed</span></td></tr>
+<tr><td class="bold">Chaima M'rabti Fassi</td><td class="mn">702</td><td class="mn">1</td><td class="mn">1</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">1</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">—</span></td></tr>
+<tr><td class="bold">Abdulrahman Osman</td><td class="mn">633</td><td class="mn">1</td><td class="mn">1</td><td class="mn">0</td><td class="mn c-green">0</td><td class="mn c-red">1</td><td class="mn c-red" style="font-weight:600;">0.0%</td><td class="mn c-red" style="font-weight:600;">100.0%</td><td class="mn">0m 00s</td><td><span class="tag tr">—</span></td></tr></tbody>
+    </table>
+  </div>
+</div>
+</div><!-- /page -->
+
+<script>
+const branchColors = {DMV:"#b87000",PA:"#28288c",TX:"#c42b2b",IL:"#c42b2b",WI:"#1a9e52",DTG:"#28288c",PTG:"#1a9e52",PREP:"#7c3aed",OTHER:"#8b90a8"};
+const allUsers = [
+  ["Jean Michaud","DMV","620",494,252,242,130,122,48.4,"2m 06s","ty","Monitor"],
+  ["Annette Clements","DMV","716",385,253,132,139,114,45.1,"5m 15s","ty","Monitor"],
+  ["Ken Chotiner","PA","704",397,161,236,118,43,26.7,"2m 35s","tg","Good"],
+  ["Dennis Linden","PA","707",345,185,160,152,33,17.8,"1m 39s","tg","Best"],
+  ["Karen Stein","PA","705",343,176,167,141,35,19.9,"3m 28s","tg","Good"],
+  ["Kyle Hayden","DMV","7119",147,90,57,55,35,38.9,"3m 00s","ty","Monitor"],
+  ["Auzhane Shaw","DMV","126",134,119,15,57,62,52.1,"2m 55s","tr","High miss"],
+  ["Arrim El Haddad","PREP","7105",674,665,9,135,530,79.7,"1m 50s","tr","Critical"],
+  ["Marlon Lucero","PREP","7115",163,11,152,9,2,18.2,"5m 22s","tg","Outbound"],
+  ["Chaimae Barri","PREP","635",132,41,91,34,7,17.1,"3m 27s","tg","Good"],
+  ["Samantha Routh","PA","709",164,56,108,44,12,21.4,"1m 45s","tg","Good"],
+  ["Nary El Khayyam","PREP","7118",108,21,87,12,9,42.9,"3m 48s","ty","Monitor"],
+  ["Monica Fuentes","TX","728",108,61,47,48,13,21.3,"3m 22s","tg","Good"],
+  ["Laila Raoud","PREP","7120",100,0,100,100,0,0.0,"3m 36s","tg","Outbound"],
+  ["Jennifer Wesolowski","WI","718",145,134,11,123,11,8.2,"1m 22s","tg","Best co."],
+  ["Ichrak Boulmane","PREP","627",74,9,65,3,6,66.7,"4m 06s","tr","High miss"],
+  ["Amanda Miller","PREP","7101",67,16,51,2,14,87.5,"3m 18s","tr","High miss"],
+  ["Alltech IL (main)","IL","617",62,61,1,31,30,49.2,"1m 44s","ty","Monitor"],
+  ["Lisa Garza","TX","729",51,45,6,12,33,73.3,"5m 05s","tr","High miss"],
+  ["Yasser Rouky","IL","632",33,27,6,5,22,81.5,"1m 24s","tr","High miss"],
+  ["Debra Patti","PA","708",26,26,0,19,7,26.9,"2m 01s","tg","Good"],
+  ["Souk Phommasack","DMV","604",23,23,0,6,17,73.9,"5m 08s","tr","High miss"],
+  ["Kelly Cook","DMV","626",22,17,5,5,12,70.6,"4m 19s","tr","High miss"],
+  ["Stacey Brown","PREP","7114",57,6,51,3,3,50.0,"4m 22s","ty","Monitor"],
+  ["Fatima Elouissi","PREP","7107",46,3,43,3,0,0.0,"3m 17s","tg","Outbound"],
+  ["JP Ricohermoso","PREP","720",40,23,17,5,18,78.3,"2m 10s","tr","High miss"],
+  ["Marti Watson","PTG","505",1,1,0,0,1,100.0,"0m 00s","tr","All missed"]
+];
+const tbody = document.getElementById("aub");
+allUsers.forEach(function([name,branch,ext,total,ib,ob,ans,miss,missP,handle,tagCls,tagLbl]){
+  var bc = branchColors[branch]||"#8b90a8";
+  var mc2 = missP>=70?"#c42b2b":missP>=40?"#b87000":"#1a9e52";
+  var comp = ib>0?(ans/ib*100).toFixed(1)+"%" :"—";
+  var compC = ib>0?(ans/ib>=0.7?"#1a9e52":ans/ib>=0.5?"#b87000":"#c42b2b"):"#8b90a8";
+  if(total===0){
+    tbody.insertAdjacentHTML("beforeend","<tr><td class='bold'>"+name+"</td><td><span style='background:"+bc+"15;color:"+bc+";border:1px solid "+bc+"30;font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:4px;'>"+branch+"</span></td><td class='mn'>"+ext+"</td><td class='mn c-txt3' colspan='9'>No calls logged</td></tr>");
+    return;
+  }
+  tbody.insertAdjacentHTML("beforeend","<tr><td class='bold'>"+name+"</td><td><span style='background:"+bc+"15;color:"+bc+";border:1px solid "+bc+"30;font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:4px;'>"+branch+"</span></td><td class='mn'>"+ext+"</td><td class='mn'>"+total.toLocaleString()+"</td><td class='mn'>"+ib.toLocaleString()+"</td><td class='mn'>"+ob.toLocaleString()+"</td><td class='mn' style='color:#1a9e52;'>"+ans.toLocaleString()+"</td><td class='mn' style='color:"+mc2+";'>"+miss.toLocaleString()+"</td><td class='mn' style='color:"+compC+";font-weight:600;'>"+comp+"</td><td class='mn' style='color:"+mc2+";font-weight:600;'>"+missP.toFixed(1)+"%</td><td class='mn'>"+handle+"</td><td><span class='tag t"+tagCls.slice(1)+"'>"+tagLbl+"</span></td></tr>");
+});
+function switchTab(id,btn){
+  document.querySelectorAll(".tab-pane").forEach(function(p){p.classList.remove("active");});
+  document.querySelectorAll(".tab-btn").forEach(function(b){b.classList.remove("active");});
+  document.getElementById("tab-"+id).classList.add("active");
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>
