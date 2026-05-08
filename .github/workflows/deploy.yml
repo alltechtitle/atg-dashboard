@@ -15,8 +15,13 @@ jobs:
         with:
           node-version: '20'
 
-      - run: npm install -g netlify-cli
+      - name: Generate index.html from template + data
+        run: node generate.js
 
-      - run: netlify deploy --prod --dir=. --functions=netlify/functions --site=${{ secrets.NETLIFY_SITE_ID }} --no-build
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy to Netlify
+        run: netlify deploy --prod --dir=. --functions=netlify/functions --site=${{ secrets.NETLIFY_SITE_ID }} --no-build
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
