@@ -1,24 +1,17 @@
-I notice that you mentioned parsing CSV reports, but I don't see any actual CSV data in your message. The message contains:
-
-"CSVs:\n\n\n\n"
-
-But there's no CSV content between those markers.
-
-Could you please provide the actual CSV data that you'd like me to parse? Once you share the CSV reports, I'll be able to analyze them and return the JSON object with the order metrics by branch in the exact structure you specified:
-
-```json
 {
-  "total_opened": 0,
-  "total_closed": 0, 
-  "total_cancelled": 0,
-  "branches": {
-    "DMV": {"opened": 0, "closed": 0, "cancelled": 0},
-    "PA": {"opened": 0, "closed": 0, "cancelled": 0},
-    "WI": {"opened": 0, "closed": 0, "cancelled": 0},
-    "IL": {"opened": 0, "closed": 0, "cancelled": 0},
-    "TX": {"opened": 0, "closed": 0, "cancelled": 0},
-    "Potomac": {"opened": 0, "closed": 0, "cancelled": 0},
-    "Dupont": {"opened": 0, "closed": 0, "cancelled": 0}
-  }
+  "month_year": "May 2026",
+  "total_opened": "647",
+  "total_closed": "408",
+  "closing_ratio": "63%",
+  "net_pipeline": "+239",
+  "total_revenue": "$1,103,040.71",
+  "total_errors": "Pending",
+  "avg_revenue_per_file": "$2,704",
+  "dmv_revenue": "$151,056.19",
+  "pa_revenue": "$157,781.36",
+  "il_revenue": "$36,642.80",
+  "wi_revenue": "$200,833.12",
+  "tx_revenue": "$27,882.19",
+  "ptg_revenue": "$333,565.97",
+  "dtg_revenue": "$148,569.11"
 }
-```
