@@ -1,17 +1,3 @@
-{
-  "month_year": "May 2026",
-  "total_opened": "607",
-  "total_closed": "449",
-  "closing_ratio": "74%",
-  "net_pipeline": "+251",
-  "total_revenue": "$1,215,694",
-  "total_errors": "$12,218",
-  "avg_revenue_per_file": "$2,707",
-  "dmv_revenue": "$219,499",
-  "pa_revenue": "$170,785",
-  "il_revenue": "$40,655",
-  "wi_revenue": "$237,580",
-  "tx_revenue": "$7,943",
-  "ptg_revenue": "$348,041",
-  "dtg_revenue": "$163,291"
-}
+I don't see any CSV data in your message. You mentioned "CSVs:" but no actual CSV content was provided after that line. 
+
+Could you please share the CSV reports you'd like me to parse? Once you provide the data, I'll analyze it and return the JSON object with the order metrics structure you specified.
