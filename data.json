@@ -1,11 +1,11 @@
-I notice that you've mentioned parsing CSV reports, but I don't see any actual CSV data in your message. The message shows "CSVs:\n\n\n\n" but there's no CSV content provided.
+I don't see any CSV data in your message. You mentioned "CSVs:" but no actual CSV content was provided after that.
 
-To help you parse the data and return the JSON object with order metrics by branch, could you please provide the actual CSV data? Once you share the CSV content, I'll be able to analyze it and return the JSON in the exact structure you specified:
+Please provide the CSV reports you'd like me to parse, and I'll return the JSON object with the order metrics structure you specified:
 
 ```json
 {
   "total_opened": 0,
-  "total_closed": 0,
+  "total_closed": 0, 
   "total_cancelled": 0,
   "branches": {
     "DMV": {"opened": 0, "closed": 0, "cancelled": 0},
@@ -18,5 +18,3 @@ To help you parse the data and return the JSON object with order metrics by bran
   }
 }
 ```
-
-Please share the CSV data and I'll process it accordingly.
