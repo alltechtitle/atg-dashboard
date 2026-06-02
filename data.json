@@ -1,3 +1,22 @@
-I don't see any CSV data in your message. You mentioned "CSVs:" but no actual CSV content was provided after that.
+I notice that you've mentioned parsing CSV reports, but I don't see any actual CSV data in your message. The message shows "CSVs:\n\n\n\n" but there's no CSV content provided.
 
-Could you please share the CSV reports you'd like me to analyze? Once you provide the data, I'll parse it and return the JSON object with the order metrics by branch in the exact structure you specified.
+To help you parse the data and return the JSON object with order metrics by branch, could you please provide the actual CSV data? Once you share the CSV content, I'll be able to analyze it and return the JSON in the exact structure you specified:
+
+```json
+{
+  "total_opened": 0,
+  "total_closed": 0,
+  "total_cancelled": 0,
+  "branches": {
+    "DMV": {"opened": 0, "closed": 0, "cancelled": 0},
+    "PA": {"opened": 0, "closed": 0, "cancelled": 0},
+    "WI": {"opened": 0, "closed": 0, "cancelled": 0},
+    "IL": {"opened": 0, "closed": 0, "cancelled": 0},
+    "TX": {"opened": 0, "closed": 0, "cancelled": 0},
+    "Potomac": {"opened": 0, "closed": 0, "cancelled": 0},
+    "Dupont": {"opened": 0, "closed": 0, "cancelled": 0}
+  }
+}
+```
+
+Please share the CSV data and I'll process it accordingly.
