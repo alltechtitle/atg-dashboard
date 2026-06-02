@@ -1,3 +1,3 @@
-I don't see any CSV data in your message. You mentioned "CSVs:" but no actual CSV content was provided after that line. 
+I don't see any CSV data in your message. You mentioned "CSVs:" but no actual CSV content was provided after that.
 
-Could you please share the CSV reports you'd like me to parse? Once you provide the data, I'll analyze it and return the JSON object with the order metrics structure you specified.
+Could you please share the CSV reports you'd like me to parse? Once you provide the data, I'll analyze it and return the JSON object with the order metrics by branch in the exact structure you specified.
