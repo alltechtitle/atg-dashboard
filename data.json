@@ -1,20 +1,3 @@
 I don't see any CSV data in your message. You mentioned "CSVs:" but no actual CSV content was provided after that.
 
-Please provide the CSV reports you'd like me to parse, and I'll return the JSON object with the order metrics structure you specified:
-
-```json
-{
-  "total_opened": 0,
-  "total_closed": 0, 
-  "total_cancelled": 0,
-  "branches": {
-    "DMV": {"opened": 0, "closed": 0, "cancelled": 0},
-    "PA": {"opened": 0, "closed": 0, "cancelled": 0},
-    "WI": {"opened": 0, "closed": 0, "cancelled": 0},
-    "IL": {"opened": 0, "closed": 0, "cancelled": 0},
-    "TX": {"opened": 0, "closed": 0, "cancelled": 0},
-    "Potomac": {"opened": 0, "closed": 0, "cancelled": 0},
-    "Dupont": {"opened": 0, "closed": 0, "cancelled": 0}
-  }
-}
-```
+Could you please paste the CSV reports you'd like me to analyze? Once you provide the data, I'll parse it and return the JSON object with the order metrics by branch in the exact structure you specified.
